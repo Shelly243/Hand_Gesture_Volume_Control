@@ -8,6 +8,7 @@ my_hands = mp.solutions.hands.Hands()
 drawing_utils = mp.solutions.drawing_utils
 while True:
     _, image = webcam.read()
+    image = cv2.flip(image, 1)
     frame_height, frame_width, _ = image.shape
 
     rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
