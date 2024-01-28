@@ -16,7 +16,7 @@ while True:
     if hands:
         for hand in hands:
             drawing_utils.draw_landmarks(image, hand)
-            landmarks = hand.landmarks
+            landmarks = hand.landmark
             for id, landmark in enumerate(landmarks):
                 x = int(landmark.x * frame_width)
                 y = int(landmark.y * frame_height)
